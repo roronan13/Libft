@@ -1,16 +1,16 @@
 #ifndef LIBFT_H
 #define LIBHT_H
 
-int		ft_isalpha(int);
-int		ft_isdigit(int);
-int		ft_isalnum(int);
-int		ft_isascii(int);
-int		ft_isprint(int);
-size_t	ft_strlen(const char);
-int		ft_toupper(int);
-int		ft_tolower(int);
-char	*ft_strchr(const char *, int);
-char	*ft_strrchr(const char *, int);
-int		ft_strncmp(const char *, const char *, size_t);
+int		ft_isalpha(int a);
+int		ft_isdigit(int a);
+int		ft_isalnum(int a);
+int		ft_isascii(int a);
+int		ft_isprint(int a);
+size_t	ft_strlen(const char *s);
+int		ft_toupper(int a);
+int		ft_tolower(int a);
+char	*ft_strchr(const char *s, int a);
+char	*ft_strrchr(const char *s, int a);
+int		ft_strncmp(const char *s1, const char *s2, size_t a);
 
 #endif
