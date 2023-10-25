@@ -12,19 +12,24 @@
 #include "libft.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	int	i;
+	int j;
 
 	i = 0;
+	j = 0;
+	while (src[j])
+		j++;
 	while (src[i] && i < dstsize)
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (2);
+	return (j);
 }
 
 int	main(void)
@@ -33,12 +38,11 @@ int	main(void)
 	const char	*src;
 	size_t		dstsize;
 
-	dst = "Bonj";
 	src = "Allo";
 	dstsize = 3;
+	dst = malloc(sizeof(char) * dstsize + 1);
 	printf("%ld\n", ft_strlcpy(dst, src, dstsize));
 	printf("%s\n", dst);
 	printf("%s\n", src);
-	//printf("%ld\n", strlcpy(dst, src, dstsize));
 	return (0);
 }
