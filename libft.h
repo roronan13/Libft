@@ -1,5 +1,8 @@
 #ifndef LIBFT_H
 #define LIBHT_H
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
 
 int		ft_isalpha(int a);
 int		ft_isdigit(int a);
