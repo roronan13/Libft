@@ -18,17 +18,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	int	i;
 
 	i = 0;
-	while (src[i] && dst[i] && i < dstsize)
+	while (src[i] && i < dstsize)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	while (dst[i])
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (strlen(src));
+	dst[i] = '\0';
+	return (2);
 }
 
 int	main(void)
@@ -37,11 +33,12 @@ int	main(void)
 	const char	*src;
 	size_t		dstsize;
 
-	dst = "Bonjour";
+	dst = "Bonj";
 	src = "Allo";
-	dstsize = 4;
+	dstsize = 3;
 	printf("%ld\n", ft_strlcpy(dst, src, dstsize));
 	printf("%s\n", dst);
 	printf("%s\n", src);
+	//printf("%ld\n", strlcpy(dst, src, dstsize));
 	return (0);
 }
