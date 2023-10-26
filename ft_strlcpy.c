@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:40:06 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 16:20:31 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:24:03 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (ft_strlen(src));
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char		*dst;
 	const char	*src;
@@ -46,4 +46,4 @@ int	main(void)
 	printf("%s\n", dst);
 	printf("%s\n", src);
 	return (0);
-}
+}*/
