@@ -6,14 +6,13 @@
 /*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 19:29:21 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 17:41:16 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 18:38:12 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t 	ft_strlen(const char *s)
 {
 	long unsigned int	i;
 

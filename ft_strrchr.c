@@ -6,12 +6,11 @@
 /*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 22:06:58 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 17:41:47 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:44:18 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -6,12 +6,11 @@
 /*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 23:19:52 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 17:42:00 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:43:46 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

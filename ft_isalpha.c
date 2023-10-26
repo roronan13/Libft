@@ -6,12 +6,11 @@
 /*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:45:11 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 17:37:37 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:36:55 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalpha(int a)
 {

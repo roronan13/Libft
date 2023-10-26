@@ -6,12 +6,11 @@
 /*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 19:19:16 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 17:37:17 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:38:49 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int a)
 {

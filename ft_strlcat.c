@@ -6,13 +6,11 @@
 /*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:25:00 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 17:24:12 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:41:01 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
