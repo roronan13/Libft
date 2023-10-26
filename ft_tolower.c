@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 20:10:28 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/19 20:20:48 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:41:41 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <ctype.h>
 #include <stdio.h>
 

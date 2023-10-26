@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 23:19:52 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/20 01:24:36 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:42:00 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <string.h>
 #include <stdio.h>
 

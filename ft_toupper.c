@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 19:53:12 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/19 20:07:48 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:41:30 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <ctype.h>
 #include <stdio.h>
 

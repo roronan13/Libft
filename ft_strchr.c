@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 20:33:17 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/19 21:59:23 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:41:54 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <string.h>
 #include <stdio.h>
 
