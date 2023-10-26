@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:40:06 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/20 13:36:33 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:20:31 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 #include <string.h>
 #include <stdio.h>
@@ -29,10 +30,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[i] = '\0';
-	return (j);
+	return (ft_strlen(src));
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char		*dst;
 	const char	*src;
@@ -45,4 +46,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	printf("%s\n", dst);
 	printf("%s\n", src);
 	return (0);
-}*/
+}
