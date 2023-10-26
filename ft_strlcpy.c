@@ -29,20 +29,20 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[i] = '\0';
-	return (ft_strlen(src));
+	return (j);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char		*dst;
 	const char	*src;
 	size_t		dstsize;
 
 	src = "Allo";
-	dstsize = 3;
+	dstsize = 2;
 	dst = malloc(sizeof(char) * dstsize + 1);
 	printf("%ld\n", ft_strlcpy(dst, src, dstsize));
 	printf("%s\n", dst);
 	printf("%s\n", src);
 	return (0);
-}
+}*/
