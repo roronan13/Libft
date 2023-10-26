@@ -6,12 +6,13 @@
 /*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:40:06 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 19:42:26 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:52:05 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 //#include "ft_strlen.c"
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	int	i;
