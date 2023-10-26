@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:26:47 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 19:53:18 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/26 21:03:11 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int		ft_tolower(int a);
 char	*ft_strchr(const char *s, int a);
 char	*ft_strrchr(const char *s, int a);
 int		ft_strncmp(const char *s1, const char *s2, size_t a);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif
