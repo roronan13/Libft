@@ -10,6 +10,7 @@ int		ft_isalnum(int a);
 int		ft_isascii(int a);
 int		ft_isprint(int a);
 size_t	ft_strlen(const char *s);
+size_t  ft_strlcpy(char *dst, const char *src, size_t a);
 int		ft_toupper(int a);
 int		ft_tolower(int a);
 char	*ft_strchr(const char *s, int a);
