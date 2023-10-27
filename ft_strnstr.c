@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 21:00:17 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/27 13:30:56 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/27 13:59:56 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	j = 0;
 	if (!little[0])
-		return (big);
+		return ((char *)big);
 	while (big[i] && i < len)
 	{
 		if (little[j] == big[i])
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			while (little[j] && big[i] && little[j] == big[i] && i < len)
 			{
 				if (little[j + 1] == '\0')
-					return (&big[i - j]);
+					return ((char *)&big[i - j]);
 				i++;
 				j++;
 			}
@@ -40,16 +40,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	*big;
 	char	*little;
 	size_t	len;
 
 	big = "Bonjour je suis.";
-	little = "k";
-	len = 40;
+	little = "je";
+	len = 9;
 	printf("%s\n", ft_strnstr(big, little, len));
 	//printf("%s\n", strnstr(big, little, 2));
 	return (0);
-}
+}*/
