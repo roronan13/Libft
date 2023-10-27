@@ -12,7 +12,7 @@ SRCS	=	ft_isalpha.c\
 			ft_strrchr.c\
 			ft_strncmp.c
 
-# comile implicitement en .o
+# compile implicitement en .o
 OBJS	=	$(SRCS:.c=.o)
 
 CC		=	gcc
@@ -30,9 +30,9 @@ $(NAME)	:	$(OBJS)
 			$(AR) rcs $@ $^
 
 # $@ le truc a gauche d'une regle
-# $< la dependence la plus a gauche
-# $^ toute les dependence
-# $1 $2 la position de la depandance 
+# $< la dependance la plus a gauche
+# $^ toutes les dependances
+# $1 $2 la position de la dependance 
 
 clean	:	
 			$(RM) $(OBJS)
