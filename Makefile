@@ -10,7 +10,10 @@ SRCS	=	ft_isalpha.c\
 			ft_tolower.c\
 			ft_strchr.c\
 			ft_strrchr.c\
-			ft_strncmp.c
+			ft_strncmp.c\
+			ft_strlcpy.c\
+			ft_strlcat.c\
+			ft_strnstr.c
 
 # compile implicitement en .o
 OBJS	=	$(SRCS:.c=.o)
@@ -19,7 +22,7 @@ CC		=	gcc
 
 CFLAGS	=	-W -Wall -Wextra -Werror
 
-RM		=	rm
+RM		=	rm -rf
 
 CLEAN	=	clean
 
@@ -36,7 +39,6 @@ $(NAME)	:	$(OBJS)
 
 clean	:	
 			$(RM) $(OBJS)
-			@$(CLEAN)
 
 fclean	:	clean
 			$(RM) $(NAME)

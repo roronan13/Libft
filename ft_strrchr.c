@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 22:06:58 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 19:44:18 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/27 16:09:57 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ char	*ft_strrchr(const char *s, int c)
 	while (s[i])
 		i++;
 	if (c == '\0')
-		return (&s[i]);
+		return ((char *)&s[i]);
 	else
 	{
 		while (s[i] != c && i > 0)
 			i--;
 		if (s[i] == c)
-			return (&s[i]);
+			return ((char *)&s[i]);
 		else
 			return (NULL);
 	}

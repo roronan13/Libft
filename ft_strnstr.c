@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 21:00:17 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/27 13:59:56 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/27 16:17:52 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
+	size_t	i;
 	int	j;
 
 	i = 0;
