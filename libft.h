@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:26:47 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 21:03:11 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/27 14:53:00 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		ft_isalnum(int a);
 int		ft_isascii(int a);
 int		ft_isprint(int a);
 size_t	ft_strlen(const char *s);
+void	*memset(void *s, int c, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t a);
 size_t	ft_strlcat(char *dst, const char *src, size_t a);
 int		ft_toupper(int a);
