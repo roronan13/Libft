@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 19:29:21 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 18:38:12 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/30 22:14:08 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t 	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	long unsigned int	i;
 

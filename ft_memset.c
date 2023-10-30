@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 14:42:40 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/27 15:59:33 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/30 22:03:08 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*memset(void *s, int c, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*ptr;
 
 	i = 0;

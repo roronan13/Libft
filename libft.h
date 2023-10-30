@@ -6,11 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:26:47 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/27 14:53:00 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/30 22:15:22 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
 
 # include <ctype.h>

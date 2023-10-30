@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:25:00 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/27 16:17:21 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/30 22:15:57 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	i;
+	int		i;
 	size_t	j;
 
 	i = 0;
