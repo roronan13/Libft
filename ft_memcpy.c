@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:33:55 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/31 20:17:35 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/31 20:52:22 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	ptr_dest = (char *)dest;
 	ptr_src = (char *)src;
-	while (i < n && ptr_dest[i] && ptr_src[i])
+	while (i < n)
 	{
 		ptr_dest[i] = ptr_src[i];
 		i++;
