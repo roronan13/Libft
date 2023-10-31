@@ -6,11 +6,12 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:25:00 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/31 15:33:33 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:58:35 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <bsd/string.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -44,14 +45,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	const char	*src;
 	size_t		size;
 
-	src = "Oui";
+	src = NULL;
 	size = 9;
-	dst = malloc(sizeof(char) * 0);
+	dst = malloc(sizeof(char) * 30);
+	//dst = NULL;
 	//dst[0] = 'O';
 	//dst[1] = 'u';
 	//dst[2] = 'i';
-	printf("%ld\n", ft_strlcat(dst, src, size));
-	printf("%s\n", dst);
-	printf("%s\n", src);
+	//printf("%ld\n", ft_strlcat(dst, src, size));
+	strlcat(dst, src, size);
+	//printf("%ld\n", strlcat(dst, src, size));
+	//printf("%s\n", dst);
+	//printf("%s\n", src);
 	return (0);
 }*/
