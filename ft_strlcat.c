@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:25:00 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/31 15:15:00 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:33:33 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	const char	*src;
 	size_t		size;
 
-	src = " Allo";
+	src = "Oui";
 	size = 9;
-	dst = malloc(sizeof(char) * 20);
-	dst[0] = 'O';
-	dst[1] = 'u';
-	dst[2] = 'i';
+	dst = malloc(sizeof(char) * 0);
+	//dst[0] = 'O';
+	//dst[1] = 'u';
+	//dst[2] = 'i';
 	printf("%ld\n", ft_strlcat(dst, src, size));
 	printf("%s\n", dst);
 	printf("%s\n", src);
