@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 22:06:58 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/27 16:09:57 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:55:47 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int				i;
+	unsigned char	a;
 
 	i = 0;
+	a = (unsigned char)c;
 	while (s[i])
 		i++;
-	if (c == '\0')
+	if (a == '\0')
 		return ((char *)&s[i]);
 	else
 	{
-		while (s[i] != c && i > 0)
+		while (s[i] != a && i > 0)
 			i--;
-		if (s[i] == c)
+		if (s[i] == a)
 			return ((char *)&s[i]);
 		else
 			return (NULL);
