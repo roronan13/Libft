@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:16:51 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/31 19:23:02 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/31 19:25:47 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	ptr = (char *)s;
 	while (i < n)
 	{
-		ptr[i] = '/0';
+		ptr[i] = '\0';
 		i++;
 	}
-	return (ptr);
 }
