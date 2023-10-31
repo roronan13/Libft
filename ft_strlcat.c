@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:25:00 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/30 23:02:19 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/10/31 12:44:51 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int		i;
 	size_t	j;
+	int		initial_dst_size;
 
 	i = 0;
 	j = 0;
+	initial_dst_size = strlen(dst);
 	if (size != 0)
 	{
 		while (dst[i])
@@ -31,7 +33,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		}
 		dst[i] = '\0';
 	}
-	return (strlen(dst));
+	return (strlen(src) + initial_dst_size);
 }
 
 /*int	main(void)
