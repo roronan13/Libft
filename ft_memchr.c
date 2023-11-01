@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:44:55 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/01 22:54:52 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/01 23:01:09 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	a = (unsigned char)c;
 	ptr = (unsigned char *)s;
-	while (ptr[i] && i < n)
+	while (i < n)
 	{
-		if(ptr[i] == a)
+		if (ptr[i] == a)
 			return (&ptr[i]);
 		i++;
 	}
