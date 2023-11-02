@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:04:50 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/02 16:37:08 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/02 16:38:28 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	resu = 0;
 	a = 1;
-	while (!ft_isdigit(ptr[i] - 48))
+	while (!ft_isdigit(ptr[i]))
 		i++;
-	while (ft_isdigit(ptr[i] - 48))
+	while (ft_isdigit(ptr[i]))
 		i++;
-	while (ft_isdigit(ptr[i] - 48))
+	while (ft_isdigit(ptr[i]))
 	{
 		resu += (ptr[i] - 48) * a;
 		a *= 10;
