@@ -6,11 +6,12 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 23:03:50 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/01 23:23:42 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:50:32 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*
+include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -27,3 +28,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	return (*ptr1[i] - *ptr2[i]);
 }
+*/
