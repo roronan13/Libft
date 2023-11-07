@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:04:50 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/07 21:26:02 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/07 21:39:09 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,12 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	resu = 0;
 	a = 1;
-	while (ft_isspace(ptr[i]))
+	while (ft_isspace(ptr[i]) || ptr[i] == '+' || ptr[i] == '-')
+	{
+		if ((ptr[i] == '+' || ptr[i] == '-') && !ft_isdigit(ptr[i + 1]))
+			return (0);
 		i++;
+	}
 	while (ft_isdigit(ptr[i]))
 		i++;
 	i -= 1;
@@ -41,7 +45,7 @@ int	ft_atoi(const char *nptr)
 		a *= 10;
 		i--;
 	}
-	if (ptr[i - 1] == '-')
+	if (ptr[i] == '-')
 		return (-resu);
 	return (resu);
 }
