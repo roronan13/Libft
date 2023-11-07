@@ -6,15 +6,22 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:04:50 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/07 21:39:09 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/07 22:40:56 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(int a)
+int	ft_space(int a)
 {
 	if (a == 32 || (a >= 9 && a <= 13))
+		return (1);
+	return (0);
+}
+
+int	ft_sign(int a)
+{
+	if (a == '+' || a == '-')
 		return (1);
 	return (0);
 }
@@ -30,22 +37,19 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	resu = 0;
 	a = 1;
-	while (ft_isspace(ptr[i]) || ptr[i] == '+' || ptr[i] == '-')
-	{
-		if ((ptr[i] == '+' || ptr[i] == '-') && !ft_isdigit(ptr[i + 1]))
-			return (0);
+	while (ft_space(ptr[i]))
 		i++;
-	}
+	if (ft_sign(ptr[i]) && ft_isdigit(ptr[i + 1]))
+		i++;
 	while (ft_isdigit(ptr[i]))
 		i++;
-	i -= 1;
-	while (ft_isdigit(ptr[i]) && i >= 0)
+	while (ft_isdigit(ptr[i - 1]) && i - 1 >= 0)
 	{
-		resu += (ptr[i] - 48) * a;
+		resu += (ptr[i - 1] - 48) * a;
 		a *= 10;
 		i--;
 	}
-	if (ptr[i] == '-')
+	if (ptr[i - 1] == '-')
 		return (-resu);
 	return (resu);
 }
