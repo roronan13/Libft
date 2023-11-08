@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:48:39 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/08 19:19:08 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:06:56 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s))
 	{
 		ptr = malloc(sizeof(char) * 1);
+		ptr[i] = '\0';
 		return (ptr);
 	}
 	if (len > ft_strlen(s) - start)
@@ -32,11 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!ptr)
 		return (NULL);
 	while (s_copy[start] && i < len)
-	{
-		ptr[i] = s_copy[start];
-		i++;
-		start++;
-	}
+		ptr[i++] = s_copy[start++];
 	ptr[i] = '\0';
 	return (ptr);
 }
