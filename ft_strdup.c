@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:13:04 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/08 16:18:34 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:22:10 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 char	*ft_strdup(const char *s)
 {
-	
+	char	*ptr;
+
+	ptr = malloc(sizeof(char) * )
 }
