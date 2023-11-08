@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:12:12 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/08 14:13:18 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:36:07 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	
+	void	*ptr;
+
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	ptr = malloc(sizeof(size) * nmemb);
+	return (ptr);
 }
