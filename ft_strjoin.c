@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 20:16:08 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/08 20:55:01 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:59:08 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!ptr)
 		return (NULL);
 	ft_strlcpy(ptr, s1, size_s1 + 1);
-	ft_strlcat(ptr, s2, size_s2 + 1);
+	ft_strlcat(ptr, s2, size_s1 + size_s2 + 1);
 	return (ptr);
 }
