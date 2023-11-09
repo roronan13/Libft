@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:04:03 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/09 19:09:49 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/09 19:24:34 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr = malloc(sizeof(char) * (j - i + 1));
 	if (!ptr)
 		return (NULL);
-	ft_memcpy(ptr, &s1[i], j - i + 1);
+	ft_strlcpy(ptr, &s1[i], j - i + 1);
 	return (ptr);
 }
