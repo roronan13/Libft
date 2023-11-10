@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 11:23:55 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/10 15:19:48 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/10 15:32:07 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,21 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int	a;
-	
-	a = n;
 	if (n == -2147483648)
+	{
 		write(fd, "-2147483648", 11);
+		return ;
+	}
 	else if (n < 0)
 	{
-		n =* - 1;
+		n *= - 1;
 		write(fd, "-", 1);
 	}
 	if (n <= 9)
-		write(fd, &n - 48, 1);
+		ft_putchar_fd(n + 48, fd);
 	else
 	{
-		n =/ 10;
-		ft_putnbr_fd(n, fd);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
-	
 }
