@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:26:47 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/09 21:02:22 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:59:48 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <stddef.h>
+# include <unistd.h>
 
 int		ft_isalpha(int a);
 int		ft_isdigit(int a);
