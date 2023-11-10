@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:39:42 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/10 18:10:06 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:13:18 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 	return (i + 1);
 } */
 
-/* char	*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*ptr;
 	int		a;
@@ -67,7 +67,7 @@
 	}
 	ptr[i] = '\0';
 	return (ptr);
-} */
+}
 
 /* int	main()
 {
