@@ -6,14 +6,14 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:39:42 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/10 17:48:38 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:10:06 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <limits.h>
 
-static int	size(int n)
+/* static int	size(int n)
 {
 	int	i;
 
@@ -28,9 +28,9 @@ static int	size(int n)
 		i++;
 	}
 	return (i + 1);
-}
+} */
 
-char	*ft_itoa(int n)
+/* char	*ft_itoa(int n)
 {
 	char	*ptr;
 	int		a;
@@ -67,7 +67,7 @@ char	*ft_itoa(int n)
 	}
 	ptr[i] = '\0';
 	return (ptr);
-}
+} */
 
 /* int	main()
 {
