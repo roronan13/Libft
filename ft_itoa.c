@@ -6,14 +6,14 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:39:42 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/13 22:11:02 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:24:52 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <limits.h>
 
-static int	size(int n)
+static int	ft_size(int n)
 {
 	int	i;
 
@@ -55,12 +55,10 @@ static char	*ft_putnbr(char *ptr, int n, int i)
 char	*ft_itoa(int n)
 {
 	char	*ptr;
-	int		a;
 	int		i;
 
-	a = size(n);
 	i = 0;
-	ptr = (char *)malloc(sizeof(char) * a);
+	ptr = (char *)malloc(sizeof(char) * ft_size(n));
 	if (!ptr)
 		return (NULL);
 	if (n == -2147483648)
@@ -68,19 +66,7 @@ char	*ft_itoa(int n)
 		ptr = "-2147483648";
 		return (ptr);
 	}
-	
-	if (n < 10)
-	{
-		ptr[i] = n + 48;
-		i++;
-	}
-	else
-	{
-		ft_itoa(n / 10);
-		ft_itoa(n % 10);
-	}
-	}
-	ptr[i] = '\0';
+	ft_putnbr(ptr, n, i);
 	return (ptr);
 }
 
