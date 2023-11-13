@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:39:42 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/13 22:24:52 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:26:47 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,3 @@ char	*ft_itoa(int n)
 	ft_putnbr(ptr, n, i);
 	return (ptr);
 }
-
-/* int	main()
-{
-	printf("%d\n", size(INT_MIN));
-}
- */
