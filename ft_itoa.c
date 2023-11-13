@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:39:42 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/14 00:17:07 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:36:50 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static int	ft_size(int n)
 	i = 0;
 	if (n == 0)
 		return (2);
+	/*if (n == -2147483648)
+		return (12);*/
 	if (n < 0)
 		i = 1;
 	while (n != 0)
@@ -31,7 +33,6 @@ static int	ft_size(int n)
 
 static void	ft_putnbr(char *ptr, int n, int i, int size)
 {
-	//i++;
 	if (n < 0)
 	{
 		n *= -1;
@@ -40,17 +41,13 @@ static void	ft_putnbr(char *ptr, int n, int i, int size)
 	}
 	if (n < 10)
 	{
-		//i++;
 		while ((ptr[i] >= '0' && ptr[i] <= '9') || ptr[i] == '-')
 			i++;
 		ptr[i] = n + 48;
-		//i++;
 	}
 	else
 	{
-		//i++;
 		ft_putnbr(ptr, n / 10, i, size);
-		//i++;
 		ft_putnbr(ptr, n % 10, i, size);
 	}
 }
@@ -69,7 +66,7 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 	{
 		ptr = "-2147483648";
-		ptr[size - 1] = '\0';
+		//ptr[size - 1] = '\0';
 		return (ptr);
 	}
 	ft_putnbr(ptr, n, i, size);
