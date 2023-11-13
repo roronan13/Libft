@@ -6,12 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:39:42 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/13 23:00:29 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/13 23:56:58 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 static int	ft_size(int n)
 {
@@ -30,8 +29,9 @@ static int	ft_size(int n)
 	return (i + 1);
 }
 
-static char	*ft_putnbr(char *ptr, int n, int i, int size)
+static void	ft_putnbr(char *ptr, int n, int i, int size)
 {
+	//i++;
 	if (n < 0)
 	{
 		n *= -1;
@@ -41,17 +41,13 @@ static char	*ft_putnbr(char *ptr, int n, int i, int size)
 	if (n < 10)
 	{
 		ptr[i] = n + 48;
-		i++;
+		//i++;
 	}
 	else
 	{
-		ft_putnbr(ptr, n / 10, i);
-		ft_putnbr(ptr, n % 10, i);
-	}
-	if (i == size - 1)
-	{
-		ptr[ft_strlen(ptr)] = '\0';
-		return (ptr);
+		//i++;
+		ft_putnbr(ptr, n / 10, i, size);
+		ft_putnbr(ptr, n % 10, i, size);
 	}
 }
 
@@ -61,8 +57,8 @@ char	*ft_itoa(int n)
 	int		i;
 	int		size;
 
-	i = 0;
 	size = ft_size(n);
+	i = 0;
 	ptr = (char *)malloc(sizeof(char) * size);
 	if (!ptr)
 		return (NULL);
@@ -72,5 +68,6 @@ char	*ft_itoa(int n)
 		return (ptr);
 	}
 	ft_putnbr(ptr, n, i, size);
+	ptr[size - 1] = '\0';
 	return (ptr);
 }
