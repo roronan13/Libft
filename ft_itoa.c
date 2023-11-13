@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:39:42 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/13 22:26:47 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/13 23:00:29 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	ft_size(int n)
 	return (i + 1);
 }
 
-static char	*ft_putnbr(char *ptr, int n, int i)
+static char	*ft_putnbr(char *ptr, int n, int i, int size)
 {
 	if (n < 0)
 	{
@@ -48,17 +48,22 @@ static char	*ft_putnbr(char *ptr, int n, int i)
 		ft_putnbr(ptr, n / 10, i);
 		ft_putnbr(ptr, n % 10, i);
 	}
-	ptr[ft_strlen(ptr)] = '\0';
-	return (ptr);
+	if (i == size - 1)
+	{
+		ptr[ft_strlen(ptr)] = '\0';
+		return (ptr);
+	}
 }
 
 char	*ft_itoa(int n)
 {
 	char	*ptr;
 	int		i;
+	int		size;
 
 	i = 0;
-	ptr = (char *)malloc(sizeof(char) * ft_size(n));
+	size = ft_size(n);
+	ptr = (char *)malloc(sizeof(char) * size);
 	if (!ptr)
 		return (NULL);
 	if (n == -2147483648)
@@ -66,6 +71,6 @@ char	*ft_itoa(int n)
 		ptr = "-2147483648";
 		return (ptr);
 	}
-	ft_putnbr(ptr, n, i);
+	ft_putnbr(ptr, n, i, size);
 	return (ptr);
 }
