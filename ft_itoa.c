@@ -6,14 +6,14 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:39:42 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/10 18:13:18 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:11:02 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <limits.h>
 
-/* static int	size(int n)
+static int	size(int n)
 {
 	int	i;
 
@@ -28,7 +28,29 @@
 		i++;
 	}
 	return (i + 1);
-} */
+}
+
+static char	*ft_putnbr(char *ptr, int n, int i)
+{
+	if (n < 0)
+	{
+		n *= -1;
+		ptr[i] = '-';
+		i++;
+	}
+	if (n < 10)
+	{
+		ptr[i] = n + 48;
+		i++;
+	}
+	else
+	{
+		ft_putnbr(ptr, n / 10, i);
+		ft_putnbr(ptr, n % 10, i);
+	}
+	ptr[ft_strlen(ptr)] = '\0';
+	return (ptr);
+}
 
 char	*ft_itoa(int n)
 {
@@ -46,14 +68,7 @@ char	*ft_itoa(int n)
 		ptr = "-2147483648";
 		return (ptr);
 	}
-	while (n >= 10)
-	{
-	if (n < 0)
-	{
-		n *= -1;
-		ptr[i] = '-';
-		i++;
-	}
+	
 	if (n < 10)
 	{
 		ptr[i] = n + 48;
