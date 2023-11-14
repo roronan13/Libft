@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/14 14:23:49 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/14 15:35:26 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,21 @@ size_t	ft_count(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	if (s[i] == 'c')
+		i++;
 	while (s[i])
 	{
-		if (s[i] )
+		if (s[i] == 'c' && s[i + 1] != 'c' && s[i + 1] != '\0')
+			j++;
+		i++;
 	}
+	return (j + 2);
 }
 
 char	**ft_split(char const *s, char c)
 {
+	char	**ptr;
 
+	ptr = (char **)malloc(sizeof(char*) * ft_count(s, c));
+	
 }
