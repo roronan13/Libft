@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:39:42 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/14 12:24:48 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/14 13:41:00 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,11 @@ static int	ft_size(int n)
 	return (i + 1);
 }
 
-static void	ft_putnbr(char *ptr, int n, int i, int size)
+static void	ft_putnbr(char *ptr, int n)
 {
+	int	i;
+
+	i = 0;
 	if (n < 0)
 	{
 		n *= -1;
@@ -45,30 +48,26 @@ static void	ft_putnbr(char *ptr, int n, int i, int size)
 	}
 	else
 	{
-		ft_putnbr(ptr, n / 10, i, size);
-		ft_putnbr(ptr, n % 10, i, size);
+		ft_putnbr(ptr, n / 10);
+		ft_putnbr(ptr, n % 10);
 	}
 }
 
 char	*ft_itoa(int n)
 {
 	char	*ptr;
-	int		i;
 	int		size;
 
 	size = ft_size(n);
-	i = 0;
 	ptr = (char *)malloc(sizeof(char) * size);
 	if (!ptr)
 		return (NULL);
 	if (n == -2147483648)
 	{
 		ft_strlcpy(ptr, "-2147483648", 12);
-		//ptr = "-2147483648";
-		//ptr[size - 1] = '\0';
 		return (ptr);
 	}
-	ft_putnbr(ptr, n, i, size);
+	ft_putnbr(ptr, n);
 	ptr[size - 1] = '\0';
 	return (ptr);
 }
