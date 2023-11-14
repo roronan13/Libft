@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:39:42 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/14 00:50:50 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/14 12:24:48 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ static int	ft_size(int n)
 	i = 0;
 	if (n == 0)
 		return (2);
-	/*if (n == -2147483648)
-		return (12);*/
 	if (n < 0)
 		i = 1;
 	while (n != 0)
@@ -65,7 +63,8 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (n == -2147483648)
 	{
-		ptr = "-2147483648";
+		ft_strlcpy(ptr, "-2147483648", 12);
+		//ptr = "-2147483648";
 		//ptr[size - 1] = '\0';
 		return (ptr);
 	}
