@@ -6,13 +6,13 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/16 17:40:20 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/16 20:03:22 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count(char const *s, char c)
+static size_t	ft_count(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -32,9 +32,26 @@ size_t	ft_count(char const *s, char c)
 	return (j + 2);
 }
 
-char	*ft_fill(char const s, size_t j)
+static char	*ft_fill(char const s, char c, size_t j)
 {
-	
+	char	*ptr;
+
+	while (s[j] && s[j] != c)
+		j++;
+	ptr = malloc(sizeof(char) * j + 1);
+	if (!ptr)
+		return (NULL);
+	ft_strlcpy(ptr, s, j);
+	return (ptr);
+}
+
+void	ft_free(char *ptr, size_t i)
+{
+	while (i >= 0)
+	{
+		free(ptr[i])
+		i--;
+	}
 }
 
 char	**ft_split(char const *s, char c)
@@ -47,26 +64,35 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	a = ft_count(s, c);
 	j = 0;
-	ptr = (char **)malloc(sizeof(char*) * a);
+	ptr = (char **)malloc(sizeof(char *) * a);
 	if (!ptr)
 		return (NULL);
 	while (i < a)
 	{
-		while (s[j] != c)
-		{
+		while (s[j] == c)
 			j++;
+		ptr[i] = ft_fill(s, c, j);
+		if (!ptr[i])
+		{
+			ft_free(ptr, i);
+			return (NULL);
 		}
+		while (s[j] != c)
+			j++;
+		i++;
 	}
+	ptr[i] = '\0';
+	return (ptr);
 }
-	
-	if (!ptr[i])
+
+/* 	if (!ptr[i])
 	{
 		while (i >= 0)
 		{
 			free(ptr[i]);
 			i--;
 		}
-	}
+	} */
 
 /* int main()
 {
