@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/16 20:03:22 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/16 20:13:39 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static size_t	ft_count(char const *s, char c)
 	return (j + 2);
 }
 
-static char	*ft_fill(char const s, char c, size_t j)
+static char	*ft_fill(const char *s, char c, size_t j)
 {
 	char	*ptr;
 
@@ -45,11 +45,11 @@ static char	*ft_fill(char const s, char c, size_t j)
 	return (ptr);
 }
 
-void	ft_free(char *ptr, size_t i)
+void	ft_free(char **ptr, size_t i)
 {
-	while (i >= 0)
+	while (i)
 	{
-		free(ptr[i])
+		free(ptr[i]);
 		i--;
 	}
 }
