@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/16 20:13:39 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/16 20:57:56 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static size_t	ft_count(char const *s, char c)
 	j = 0;
 	if (ft_strlen(s) == 0)
 		return (0);
-	if (s[i] == c)
+	while (s[i] == c)
 		i++;
 	while (s[i])
 	{
