@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/17 17:58:56 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/17 18:48:12 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static char	*ft_fill(const char *s, char c, size_t j)
 	return (ptr);
 }
 
-static void	ft_free(char **ptr/* size_t i */)
+static void	ft_free(char **ptr)
 {
 	size_t	i;
 
@@ -65,40 +65,34 @@ static void	ft_free(char **ptr/* size_t i */)
 		i++;
 	}
 	free(ptr);
-	//return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
 	size_t	i;
-	size_t	a;
 	size_t	j;
 
 	i = 0;
-	a = ft_count(s, c);
-	printf("%ld\n", a);
 	j = 0;
-	ptr = (char **)malloc(sizeof(char *) * (a + 1));
+	ptr = (char **)malloc(sizeof(char *) * (ft_count(s, c) + 1));
 	if (!ptr || !s)
 		return (NULL);
-	while (i < a)
+	while (i < ft_count(s, c))
 	{
 		while (s[j] == c)
 			j++;
 		ptr[i] = ft_fill(s, c, j);
 		if (!ptr[i])
 		{
-			//return (ft_free(ptr, i));
 			ft_free(ptr);
 			return (NULL);
 		}
-		while (s[j] != c)
+		while (s[j] != c && s[j])
 			j++;
 		i++;
 	}
-	//if (i >= 1)
-		ptr[i] = NULL;
+	ptr[i] = NULL;
 	return (ptr);
 }
 
@@ -112,14 +106,14 @@ char	**ft_split(char const *s, char c)
 	}
 */
 
-int main()
+/* int main()
 {
 	char		c;
 	char	**ptr;
-	char *splitme = ft_strdup(" Tripouille");
+	char *splitme = ft_strdup("Tripouille");
 	
 
 	c = ' ';
 	ptr = ft_split(splitme, c);
-	//printf("%ld\n", ft_count(s, c));
-}
+	//printf("%ld\n", ft_count(splitme, c));
+} */
