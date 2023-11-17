@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/17 12:16:27 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:53:27 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static size_t	ft_count(char const *s, char c)
 		i++;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
+		if (s[i] == c && s[i + 1] != c && s[i + 1])
 			j++;
 		i++;
 	}
@@ -39,8 +39,8 @@ static char	*ft_fill(const char *s, char c, size_t j)
 	size_t		i;
 
 	i = 0;
-	if (ft_strlen(s) == 0)
-		return (NULL);
+	/* if (ft_strlen(s) == 0)
+		return (NULL); */
 	while (s[j] && s[j] != c)
 	{
 		j++;
@@ -54,7 +54,7 @@ static char	*ft_fill(const char *s, char c, size_t j)
 	return (ptr);
 }
 
-void	ft_free(char **ptr, size_t i)
+static void	ft_free(char **ptr, size_t i)
 {
 	while (i)
 	{
@@ -90,7 +90,8 @@ char	**ft_split(char const *s, char c)
 			j++;
 		i++;
 	}
-	ptr[i] = '\0';
+	//if (i >= 1)
+		ptr[i] = '\0';
 	return (ptr);
 }
 
