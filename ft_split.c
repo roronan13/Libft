@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/17 18:49:05 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/17 18:50:00 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static char	*ft_fill(const char *s, char c, size_t j)
 
 	i = 0;
 	if (ft_strlen(s) == 0)
-		return (NULL); 
+		return (NULL);
 	while (s[j] && s[j] != c)
 	{
 		j++;
