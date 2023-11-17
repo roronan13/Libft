@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/17 16:51:42 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/17 17:58:56 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,15 @@ static char	*ft_fill(const char *s, char c, size_t j)
 	return (ptr);
 }
 
-static void	ft_free(char **ptr, size_t i)
+static void	ft_free(char **ptr/* size_t i */)
 {
-	while (i)
+	size_t	i;
+
+	i = 0;
+	while (ptr[i])
 	{
 		free(ptr[i]);
-		i--;
+		i++;
 	}
 	free(ptr);
 	//return (NULL);
@@ -74,6 +77,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	a = ft_count(s, c);
+	printf("%ld\n", a);
 	j = 0;
 	ptr = (char **)malloc(sizeof(char *) * (a + 1));
 	if (!ptr || !s)
@@ -86,7 +90,8 @@ char	**ft_split(char const *s, char c)
 		if (!ptr[i])
 		{
 			//return (ft_free(ptr, i));
-			ft_free(ptr, i);
+			ft_free(ptr);
+			return (NULL);
 		}
 		while (s[j] != c)
 			j++;
@@ -107,12 +112,14 @@ char	**ft_split(char const *s, char c)
 	}
 */
 
-/*int main()
+int main()
 {
-	const char	*s;
 	char		c;
+	char	**ptr;
+	char *splitme = ft_strdup(" Tripouille");
+	
 
-	s = ",,,lkhk,hjjhk,yrtx,,,gcghc,,";
-	c = ',';
-	printf("%ld\n", ft_count(s, c));
-}*/
+	c = ' ';
+	ptr = ft_split(splitme, c);
+	//printf("%ld\n", ft_count(s, c));
+}
