@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/16 21:29:08 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:12:02 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,21 @@ static size_t	ft_count(char const *s, char c)
 
 static char	*ft_fill(const char *s, char c, size_t j)
 {
-	char	*ptr;
+	char		*ptr;
+	const char	*ptr2;
+	size_t		i;
 
+	i = 0;
 	while (s[j] && s[j] != c)
+	{
 		j++;
-	ptr = malloc(sizeof(char) * j + 1);
+		i++;
+	}
+	ptr = malloc(sizeof(char) * (i + 1));
 	if (!ptr)
 		return (NULL);
-	ft_strlcpy(ptr, s, j + 1);
+	ptr2 = &s[j - i];
+	ft_strlcpy(ptr, ptr2, i + 1);
 	return (ptr);
 }
 
