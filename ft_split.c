@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/17 11:12:02 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/17 12:16:27 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ static char	*ft_fill(const char *s, char c, size_t j)
 	size_t		i;
 
 	i = 0;
+	if (ft_strlen(s) == 0)
+		return (NULL);
 	while (s[j] && s[j] != c)
 	{
 		j++;
@@ -72,7 +74,7 @@ char	**ft_split(char const *s, char c)
 	a = ft_count(s, c);
 	j = 0;
 	ptr = (char **)malloc(sizeof(char *) * a);
-	if (!ptr)
+	if (!ptr || ft_strlen(s) == 0)
 		return (NULL);
 	while (i < a - 1)
 	{
