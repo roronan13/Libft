@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/17 12:53:27 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:10:40 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ static size_t	ft_count(char const *s, char c)
 		i++;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1])
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			j++;
 		i++;
 	}
-	return (j + 2);
+	return (j);
 }
 
 static char	*ft_fill(const char *s, char c, size_t j)
@@ -39,8 +39,8 @@ static char	*ft_fill(const char *s, char c, size_t j)
 	size_t		i;
 
 	i = 0;
-	/* if (ft_strlen(s) == 0)
-		return (NULL); */
+	if (ft_strlen(s) == 0)
+		return (NULL); 
 	while (s[j] && s[j] != c)
 	{
 		j++;
@@ -61,6 +61,8 @@ static void	ft_free(char **ptr, size_t i)
 		free(ptr[i]);
 		i--;
 	}
+	free(ptr);
+	//return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -73,25 +75,25 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	a = ft_count(s, c);
 	j = 0;
-	ptr = (char **)malloc(sizeof(char *) * a);
-	if (!ptr || ft_strlen(s) == 0)
+	ptr = (char **)malloc(sizeof(char *) * (a + 1));
+	if (!ptr || !s || ft_strlen(s) == 0)
 		return (NULL);
-	while (i < a - 1)
+	while (i < a)
 	{
 		while (s[j] == c)
 			j++;
 		ptr[i] = ft_fill(s, c, j);
 		if (!ptr[i])
 		{
+			//return (ft_free(ptr, i));
 			ft_free(ptr, i);
-			return (NULL);
 		}
 		while (s[j] != c)
 			j++;
 		i++;
 	}
 	//if (i >= 1)
-		ptr[i] = '\0';
+		ptr[i] = NULL;
 	return (ptr);
 }
 
@@ -102,14 +104,15 @@ char	**ft_split(char const *s, char c)
 			free(ptr[i]);
 			i--;
 		}
-	} */
+	}
+*/
 
-/* int main()
+/*int main()
 {
 	const char	*s;
 	char		c;
 
-	s = "hello!";
-	c = ' ';
+	s = ",,,lkhk,hjjhk,yrtx,,,gcghc,,";
+	c = ',';
 	printf("%ld\n", ft_count(s, c));
-} */
+}*/
