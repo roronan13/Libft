@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 19:29:21 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/22 22:19:51 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/23 00:20:26 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	long unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
