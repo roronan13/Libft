@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/17 18:50:00 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:14:58 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,25 +95,3 @@ char	**ft_split(char const *s, char c)
 	ptr[i] = NULL;
 	return (ptr);
 }
-
-/*if (!ptr[i])
-	{
-		while (i >= 0)
-		{
-			free(ptr[i]);
-			i--;
-		}
-	}
-*/
-
-/* int main()
-{
-	char		c;
-	char	**ptr;
-	char *splitme = ft_strdup("Tripouille");
-	
-
-	c = ' ';
-	ptr = ft_split(splitme, c);
-	//printf("%ld\n", ft_count(splitme, c));
-} */

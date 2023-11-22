@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:45:11 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/27 16:07:41 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:12:48 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_isalpha(int a)
 		return (1);
 	return (0);
 }
-
-/*int	main(void)
-{
-	int	a;
-
-	a = '80';
-	printf("%d\n", ft_isalpha(a));
-	printf("%d\n", isalpha(a));
-	return (0);
-}*/

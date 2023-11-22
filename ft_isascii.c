@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 19:03:53 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 19:37:27 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:12:55 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_isascii(int a)
 		return (1);
 	return (0);
 }
-
-/*int	main(void)
-{
-	int	a;
-
-	a = 130;
-	printf("%d\n", ft_isascii(a));
-	printf("%d\n", isascii(a));
-	return (0);
-}*/
