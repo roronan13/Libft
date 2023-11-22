@@ -6,20 +6,20 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:04:50 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/07 22:40:56 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:22:43 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_space(int a)
+static int	ft_space(int a)
 {
 	if (a == 32 || (a >= 9 && a <= 13))
 		return (1);
 	return (0);
 }
 
-int	ft_sign(int a)
+static int	ft_sign(int a)
 {
 	if (a == '+' || a == '-')
 		return (1);
