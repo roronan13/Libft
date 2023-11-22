@@ -6,18 +6,14 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:26:47 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/14 13:51:36 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:43:38 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <ctype.h>
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
-# include <stddef.h>
 # include <unistd.h>
 
 int		ft_isalpha(int a);

@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 11:02:06 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/10 11:19:55 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 23:03:36 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
+	long unsigned int	i;
 
 	if (!s)
 		return ;

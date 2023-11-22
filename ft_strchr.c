@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 20:33:17 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/22 22:15:22 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 23:38:54 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int				i;
-	char			*ptr;
-	unsigned char	a;
+	long unsigned int	i;
+	char				*ptr;
+	unsigned char		a;
 
 	i = 0;
 	ptr = (char *)s;

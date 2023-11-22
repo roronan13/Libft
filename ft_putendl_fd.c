@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 11:10:20 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/10 11:19:47 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 23:03:14 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
+	long unsigned int	i;
 
 	if (!s)
 		return ;

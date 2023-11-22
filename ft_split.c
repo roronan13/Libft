@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:50:14 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/22 22:14:58 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 23:35:07 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	ft_count(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
+	long unsigned int	i;
+	size_t				j;
 
 	i = 0;
 	j = 0;
@@ -56,7 +56,7 @@ static char	*ft_fill(const char *s, char c, size_t j)
 
 static void	ft_free(char **ptr)
 {
-	size_t	i;
+	long unsigned int	i;
 
 	i = 0;
 	while (ptr[i])
