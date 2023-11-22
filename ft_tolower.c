@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 20:10:28 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 19:44:42 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:21:36 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-
-/*int	main(void)
-{
-	int	c;
-
-	c = '>';
-	printf("%c\n", ft_tolower(c));
-	printf("%c\n", tolower(c));
-	return (0);
-}*/

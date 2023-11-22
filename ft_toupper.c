@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpothier <rpothier@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 19:53:12 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/26 19:44:54 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:21:47 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-/*int	main(void)
-{
-	int	a;
-
-	a = '[';
-	printf("%c\n", ft_toupper(a));
-	printf("%c\n", toupper(a));
-	return (0);
-}*/

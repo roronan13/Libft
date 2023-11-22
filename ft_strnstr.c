@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 21:00:17 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/30 22:16:21 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:21:01 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-/*int	main(void)
-{
-	char	*big;
-	char	*little;
-	size_t	len;
-
-	big = "Bonjour je suis.";
-	little = "je";
-	len = 9;
-	printf("%s\n", ft_strnstr(big, little, len));
-	//printf("%s\n", strnstr(big, little, 2));
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 22:06:58 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/31 18:55:47 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:21:25 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,3 @@ char	*ft_strrchr(const char *s, int c)
 			return (NULL);
 	}
 }
-
-/*int	main(void)
-{
-	char	*s;
-	int		c;
-
-	s = "Allo oui.";
-	c = 'A';
-	printf("%s\n", ft_strrchr(s, c));
-	printf("%s\n", strrchr(s, c));
-	return (0);
-}*/

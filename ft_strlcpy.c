@@ -6,12 +6,11 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 12:40:06 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/30 22:34:47 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:19:27 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include "ft_strlen.c"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -29,18 +28,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (ft_strlen(src));
 }
-
-/*int	main(void)
-{
-	char		*dst;
-	const char	*src;
-	size_t		dstsize;
-
-	src = "Allo";
-	dstsize = 2;
-	dst = (char *)malloc(sizeof(char) * dstsize + 1);
-	printf("%ld\n", ft_strlcpy(dst, src, dstsize));
-	printf("%s\n", dst);
-	printf("%s\n", src);
-	return (0);
-}*/

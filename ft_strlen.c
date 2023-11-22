@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 19:29:21 by rpothier          #+#    #+#             */
-/*   Updated: 2023/10/30 22:14:08 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/22 22:19:51 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-/*int	main(void)
-{
-	char	*s;
-
-	s = "";
-	printf("%ld\n", ft_strlen(s));
-	printf("%ld\n", strlen(s));
-	return (0);
-}*/
