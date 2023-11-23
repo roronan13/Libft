@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:26:47 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/23 16:39:28 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/23 17:41:03 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
