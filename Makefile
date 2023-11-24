@@ -35,7 +35,8 @@ SRCS		=	ft_isalpha.c\
 				ft_putendl_fd.c\
 				ft_putnbr_fd.c
 
-SRCS_BONUS	= 	ft_lstnew_bonus.c
+SRCS_BONUS	= 	ft_lstnew_bonus.c\
+				ft_lstsize_bonus.c
 
 # compile implicitement en .o
 OBJS		=	$(SRCS:.c=.o)
