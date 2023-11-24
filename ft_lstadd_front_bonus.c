@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 15:23:51 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/24 15:25:05 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/24 15:37:17 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	
+	lst->content = new;
 }

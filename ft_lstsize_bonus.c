@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 11:14:21 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/24 12:01:52 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/24 15:52:50 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	int		i;
 	t_list *a;
 
 	i = 0;
