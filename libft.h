@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:26:47 by rpothier          #+#    #+#             */
-/*   Updated: 2023/11/30 18:55:19 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/11/30 20:01:14 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstiter(t_list *lst, void(*f)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 #endif
