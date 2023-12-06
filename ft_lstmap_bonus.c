@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 20:02:39 by rpothier          #+#    #+#             */
-/*   Updated: 2023/12/01 17:23:49 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/12/06 20:19:49 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,19 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	/* size_t	size;
-	t_list	*new;
-	t_list	*a;
-
-	if (!lst || !f || !del)
-		return (NULL);
-	a = lst;
-	size = ft_lstsize(lst);
-	new = malloc(sizeof(t_list) * (size + 1));
-	if (!new)
-		return (NULL);
-	while (a != NULL)
-	{
-		new->content = f(a->content);
-		new = new->next;
-		a = a->next;
-	}
-	return (new);
-	del(a); */
+	t_list	**node;
+	t_list	*node1;
+	t_list	new;
 	
-	t_list	primary_node;
-	t_list	second_node;
-	t_list	final_node;
-	t_list	node;
-
-	primary_node = lst;
-	second_node = lst;
-	while (primary_node)
+	node1 = lst;
+	*node = lst;
+	while (node1)
 	{
-		ft_lstiter(primary_node, f);
-		node = ft_lstnew(primary_node->content);
-		if (!node)
-		{
-			
-		}
+		new = ft_lstnew(f(node1->content));
+		if (!new)
+			ft_lstclear(node, del);
+		ft_lstadd_back(node, new);
+		node1 = node1->next;
 	}
+	return (node);
 }
