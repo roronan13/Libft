@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 20:02:39 by rpothier          #+#    #+#             */
-/*   Updated: 2023/12/06 21:55:06 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/12/06 23:17:58 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		new_node = ft_lstnew(f(lst->content));
 		if (!new_node)
+		{
 			ft_lstclear(&node, del);
+			//return (NULL);
+		}
 		ft_lstadd_back(&node, new_node);
 		lst = lst->next;
 	}
