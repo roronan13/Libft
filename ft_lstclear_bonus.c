@@ -6,7 +6,7 @@
 /*   By: rpothier <rpothier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 23:25:34 by rpothier          #+#    #+#             */
-/*   Updated: 2023/12/01 16:01:20 by rpothier         ###   ########.fr       */
+/*   Updated: 2023/12/07 14:28:36 by rpothier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*node;
 	t_list	*node_temp;
 
-	if (!lst || !*lst)
+	if (!lst || !*lst || !del)
 		return ;
-	if (!del)
-	{
-		*lst = NULL;
-		return ;
-	}
 	node = *lst;
 	while (node->next)
 	{
