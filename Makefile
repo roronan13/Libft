@@ -70,7 +70,7 @@ $(NAME)		:	$(OBJS)
 # $1 $2 la position de la dependance 
 
 clean		:	
-				$(RM) $(OBJS)
+				$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean		:	clean
 				$(RM) $(NAME)
