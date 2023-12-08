@@ -45,7 +45,6 @@ SRCS_BONUS	= 	ft_lstnew_bonus.c\
 				ft_lstiter_bonus.c\
 				ft_lstmap_bonus.c
 
-# compile implicitement en .o
 OBJS		=	$(SRCS:.c=.o)
 
 OBJS_BONUS	=	$(SRCS_BONUS:.c=.o)
