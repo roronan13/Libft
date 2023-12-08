@@ -57,7 +57,6 @@ RM			=	rm -rf
 
 CLEAN		=	clean
 
-# make sans argument execute all
 all			:	$(NAME)
 
 $(NAME)		:	$(OBJS)
